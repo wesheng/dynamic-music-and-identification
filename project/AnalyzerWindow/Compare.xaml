@@ -1,0 +1,17 @@
+﻿<Window x:Class="AnalyzerWindow.Compare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnalyzerWindow"
+        mc:Ignorable="d"
+        Title="Compare" Height="300" Width="500">
+    <DockPanel>
+        <Label x:Name="LblFileName" DockPanel.Dock="Top" Content="Song File Name"/>
+        <ListBox x:Name="LsbPercents" DockPanel.Dock="Top" Height="200"/>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Height="50">
+            <Button x:Name="BtnOpen" Content="Open Song" Click="BtnOpen_Click" />
+            <Button x:Name="BtnClose" Content="Close Window" Click="BtnClose_Click" />
+        </StackPanel>
+    </DockPanel>
+</Window>

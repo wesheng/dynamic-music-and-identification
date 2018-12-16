@@ -1,0 +1,140 @@
+\hypertarget{class_audio_engine}{}\section{Audio\+Engine Class Reference}
+\label{class_audio_engine}\index{Audio\+Engine@{Audio\+Engine}}
+
+
+Engine class that manages \hyperlink{class_audio}{Audio}.  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Engine.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_audio_engine_a32ad2899215c9f207df28efb698d68f9}{Initialize} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Engine. \end{DoxyCompactList}\item 
+static \hyperlink{class_audio}{Audio} $\ast$ \hyperlink{class_audio_engine_a7ccb8d2fe6be78b16f457589962aedfe}{Load} (char $\ast$file, bool loop=false)
+\begin{DoxyCompactList}\small\item\em Loads an audio file for playback. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_audio_engine_a35a05bdfe90425fe525037f7c6551681}\label{class_audio_engine_a35a05bdfe90425fe525037f7c6551681}} 
+static \hyperlink{class_audio}{Audio} $\ast$ {\bfseries Mix} (\hyperlink{class_audio}{Audio} $\ast$a1, \hyperlink{class_audio}{Audio} $\ast$a2)
+\item 
+static void \hyperlink{class_audio_engine_af4471a467aa56bcad3db5a8a9ce8d733}{Play} (\hyperlink{class_audio}{Audio} $\ast$audio)
+\begin{DoxyCompactList}\small\item\em Plays an audio instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_audio_engine_a3729a1c2642a760385a5398472e49c2d}\label{class_audio_engine_a3729a1c2642a760385a5398472e49c2d}} 
+static void {\bfseries Pause} (\hyperlink{class_audio}{Audio} $\ast$audio)
+\item 
+\mbox{\Hypertarget{class_audio_engine_a186a5976fb2f427c975313d45a7461c2}\label{class_audio_engine_a186a5976fb2f427c975313d45a7461c2}} 
+static void {\bfseries Set\+Volume} (float volume)
+\item 
+\mbox{\Hypertarget{class_audio_engine_a10f8993b8f75c450ed71933e0a2d8106}\label{class_audio_engine_a10f8993b8f75c450ed71933e0a2d8106}} 
+static void {\bfseries Set\+Volume} (float left, float right)
+\item 
+\mbox{\Hypertarget{class_audio_engine_a9ce9d1ee17f4fb04e6b1ab47262f15e4}\label{class_audio_engine_a9ce9d1ee17f4fb04e6b1ab47262f15e4}} 
+static bool {\bfseries Set\+Pitch} (float pitch)
+\item 
+\mbox{\Hypertarget{class_audio_engine_aa832bfb517a10e1e0aa1193057b2749c}\label{class_audio_engine_aa832bfb517a10e1e0aa1193057b2749c}} 
+static bool {\bfseries Set\+Playback\+Speed} (float speed)
+\item 
+\mbox{\Hypertarget{class_audio_engine_a329395057a046b7e8096ceec22461a6a}\label{class_audio_engine_a329395057a046b7e8096ceec22461a6a}} 
+static \hyperlink{class_audio_time}{Audio\+Time} {\bfseries Get\+Position} (\hyperlink{class_audio}{Audio} $\ast$audio)
+\item 
+\mbox{\Hypertarget{class_audio_engine_acd955e65a1f9d8dd3cd223270fcedcc6}\label{class_audio_engine_acd955e65a1f9d8dd3cd223270fcedcc6}} 
+static void {\bfseries Set\+Position} (\hyperlink{class_audio}{Audio} $\ast$audio, \hyperlink{class_audio_time}{Audio\+Time} time)
+\item 
+\mbox{\Hypertarget{class_audio_engine_a2033466e582a9c9d0d8ca7ada6223066}\label{class_audio_engine_a2033466e582a9c9d0d8ca7ada6223066}} 
+static void \hyperlink{class_audio_engine_a2033466e582a9c9d0d8ca7ada6223066}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stops the currently playing audio instance. \end{DoxyCompactList}\item 
+static void \hyperlink{class_audio_engine_abc49a7e983821493bf5becc5ab25c6a0}{Swap} (\hyperlink{class_audio}{Audio} $\ast$to, \hyperlink{class_audio_time}{Audio\+Time} time)
+\begin{DoxyCompactList}\small\item\em Swaps the currently playing audio to the passed parameter. \end{DoxyCompactList}\item 
+static void \hyperlink{class_audio_engine_a4731748285d63c441eedab6b0e47440e}{Unload} (\hyperlink{class_audio}{Audio} $\ast$audio)
+\item 
+static bool \hyperlink{class_audio_engine_a745076bf5346972aecaf54ced0f5dfc6}{Shutdown} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Engine class that manages \hyperlink{class_audio}{Audio}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_engine_a32ad2899215c9f207df28efb698d68f9}\label{class_audio_engine_a32ad2899215c9f207df28efb698d68f9}} 
+\index{Audio\+Engine@{Audio\+Engine}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool Audio\+Engine\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes the Engine. 
+
+\begin{DoxyReturn}{Returns}
+Whether the Engine was initialized successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_audio_engine_a7ccb8d2fe6be78b16f457589962aedfe}\label{class_audio_engine_a7ccb8d2fe6be78b16f457589962aedfe}} 
+\index{Audio\+Engine@{Audio\+Engine}!Load@{Load}}
+\index{Load@{Load}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \hyperlink{class_audio}{Audio} $\ast$ Audio\+Engine\+::\+Load (\begin{DoxyParamCaption}\item[{char $\ast$}]{file,  }\item[{bool}]{loop = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads an audio file for playback. 
+
+Only supports W\+AV file formats. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \hyperlink{class_audio}{Audio} instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_audio_engine_af4471a467aa56bcad3db5a8a9ce8d733}\label{class_audio_engine_af4471a467aa56bcad3db5a8a9ce8d733}} 
+\index{Audio\+Engine@{Audio\+Engine}!Play@{Play}}
+\index{Play@{Play}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Audio\+Engine\+::\+Play (\begin{DoxyParamCaption}\item[{\hyperlink{class_audio}{Audio} $\ast$}]{audio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Plays an audio instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio} & The audio instance to play, \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_engine_a745076bf5346972aecaf54ced0f5dfc6}\label{class_audio_engine_a745076bf5346972aecaf54ced0f5dfc6}} 
+\index{Audio\+Engine@{Audio\+Engine}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily bool Audio\+Engine\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+/brief Shutdowns the Engine. Currently does nothing. /return Whether the Engine was shutdown successfully. \mbox{\Hypertarget{class_audio_engine_abc49a7e983821493bf5becc5ab25c6a0}\label{class_audio_engine_abc49a7e983821493bf5becc5ab25c6a0}} 
+\index{Audio\+Engine@{Audio\+Engine}!Swap@{Swap}}
+\index{Swap@{Swap}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Swap()}{Swap()}}
+{\footnotesize\ttfamily void Audio\+Engine\+::\+Swap (\begin{DoxyParamCaption}\item[{\hyperlink{class_audio}{Audio} $\ast$}]{to,  }\item[{\hyperlink{class_audio_time}{Audio\+Time}}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps the currently playing audio to the passed parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to} & The audio to swap to \\
+\hline
+{\em time} & The audio position to swap to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_engine_a4731748285d63c441eedab6b0e47440e}\label{class_audio_engine_a4731748285d63c441eedab6b0e47440e}} 
+\index{Audio\+Engine@{Audio\+Engine}!Unload@{Unload}}
+\index{Unload@{Unload}!Audio\+Engine@{Audio\+Engine}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void Audio\+Engine\+::\+Unload (\begin{DoxyParamCaption}\item[{\hyperlink{class_audio}{Audio} $\ast$}]{audio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+/brief Unloads an audio file. /param The audio instance to unload 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Dynamic\+Music/Audio\+Engine.\+h\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Dynamic\+Music/Audio\+Engine.\+cpp\end{DoxyCompactItemize}

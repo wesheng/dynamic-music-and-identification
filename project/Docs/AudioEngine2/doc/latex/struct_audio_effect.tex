@@ -1,0 +1,99 @@
+\hypertarget{struct_audio_effect}{}\section{Audio\+Effect Struct Reference}
+\label{struct_audio_effect}\index{Audio\+Effect@{Audio\+Effect}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual short $\ast$ \hyperlink{struct_audio_effect_a68a10e8078d43f86399cb72ca5419e2e}{Pre\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Preprocesses the passed audio data. \end{DoxyCompactList}\item 
+virtual short $\ast$ \hyperlink{struct_audio_effect_ab2646610037686bc72533eecd2411c09}{Start\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Processes the passed audio data. \end{DoxyCompactList}\item 
+virtual short $\ast$ \hyperlink{struct_audio_effect_a94cbc22a743bebbae125a60dda7a8b6d}{End\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Processes the passed audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static short \hyperlink{struct_audio_effect_a5d36494f57fe50ba0ec4f49f3d1eeac4}{Clamp} (short in)
+\begin{DoxyCompactList}\small\item\em Clamps the passed short to be within audio range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_audio_effect_a5d36494f57fe50ba0ec4f49f3d1eeac4}\label{struct_audio_effect_a5d36494f57fe50ba0ec4f49f3d1eeac4}} 
+\index{Audio\+Effect@{Audio\+Effect}!Clamp@{Clamp}}
+\index{Clamp@{Clamp}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Clamp()}{Clamp()}}
+{\footnotesize\ttfamily static short Clamp (\begin{DoxyParamCaption}\item[{short}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clamps the passed short to be within audio range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & The short \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The clamped short, within the range -\/0x7fff and 0x7fff 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_audio_effect_a94cbc22a743bebbae125a60dda7a8b6d}\label{struct_audio_effect_a94cbc22a743bebbae125a60dda7a8b6d}} 
+\index{Audio\+Effect@{Audio\+Effect}!End\+Process@{End\+Process}}
+\index{End\+Process@{End\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{End\+Process()}{EndProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ End\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Processes the passed audio data. 
+
+Called by Audio\+Engine\+::\+Swap(). 
+\begin{DoxyParams}{Parameters}
+{\em data} & The raw audio data, starting from current song position \\
+\hline
+{\em size} & The size of the data; from the current song position to the song position where the song is stopped \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_audio_effect_a68a10e8078d43f86399cb72ca5419e2e}\label{struct_audio_effect_a68a10e8078d43f86399cb72ca5419e2e}} 
+\index{Audio\+Effect@{Audio\+Effect}!Pre\+Process@{Pre\+Process}}
+\index{Pre\+Process@{Pre\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Pre\+Process()}{PreProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ Pre\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Preprocesses the passed audio data. 
+
+Called by Audio\+Engine\+::\+Play(). This method will only be called once by the Audio\+Engine. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The entire raw audio data \\
+\hline
+{\em size} & The size of the data \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_audio_effect_ab2646610037686bc72533eecd2411c09}\label{struct_audio_effect_ab2646610037686bc72533eecd2411c09}} 
+\index{Audio\+Effect@{Audio\+Effect}!Start\+Process@{Start\+Process}}
+\index{Start\+Process@{Start\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Start\+Process()}{StartProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ Start\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Processes the passed audio data. 
+
+Called by Audio\+Engine\+::\+Play() and Audio\+Engine\+::\+Swap(). Used when the Audio\+Engine plays a song, starting from a specific position. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The raw audio data, starting from the current song position \\
+\hline
+{\em size} & The size of the data; from the current song position to the song position where the full song takes over \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Audio\+Engine2/Audio\+Effect.\+h\end{DoxyCompactItemize}

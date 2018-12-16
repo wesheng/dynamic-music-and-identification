@@ -1,0 +1,83 @@
+\hypertarget{class_audio}{}\section{Audio Class Reference}
+\label{class_audio}\index{Audio@{Audio}}
+
+
+\hyperlink{class_audio}{Audio} class that holds music information. Automatically removes all effects that is still held.  
+
+
+
+
+{\ttfamily \#include $<$Audio.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_audio_a1014b0af8df3f0eb3dc1e99e86ad43db}{Add\+Effect} (\hyperlink{class_audio_effect}{Audio\+Effect} $\ast$effect)
+\begin{DoxyCompactList}\small\item\em Adds an audio effect. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_audio_effect}{Audio\+Effect} $\ast$ \hyperlink{class_audio_a63e37ba7c615699db84188fac87dedc9}{Remove\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Removes an audio effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_a234a96133b0b1dbaf4181626861f7c4a}\label{class_audio_a234a96133b0b1dbaf4181626861f7c4a}} 
+class {\bfseries Audio\+Engine}
+\item 
+\mbox{\Hypertarget{class_audio_a7e74df8564d626641971702bfa4a0d5e}\label{class_audio_a7e74df8564d626641971702bfa4a0d5e}} 
+class {\bfseries Audio\+Effect}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_audio}{Audio} class that holds music information. Automatically removes all effects that is still held. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em You} & may only obtain an instance of this class through the \hyperlink{class_audio_engine_a7ccb8d2fe6be78b16f457589962aedfe}{Audio\+Engine\+::\+Load()} method. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_a1014b0af8df3f0eb3dc1e99e86ad43db}\label{class_audio_a1014b0af8df3f0eb3dc1e99e86ad43db}} 
+\index{Audio@{Audio}!Add\+Effect@{Add\+Effect}}
+\index{Add\+Effect@{Add\+Effect}!Audio@{Audio}}
+\subsubsection{\texorpdfstring{Add\+Effect()}{AddEffect()}}
+{\footnotesize\ttfamily bool Audio\+::\+Add\+Effect (\begin{DoxyParamCaption}\item[{\hyperlink{class_audio_effect}{Audio\+Effect} $\ast$}]{effect }\end{DoxyParamCaption})}
+
+
+
+Adds an audio effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em effect} & The audio effect to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the effect already exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_audio_a63e37ba7c615699db84188fac87dedc9}\label{class_audio_a63e37ba7c615699db84188fac87dedc9}} 
+\index{Audio@{Audio}!Remove\+Effect@{Remove\+Effect}}
+\index{Remove\+Effect@{Remove\+Effect}!Audio@{Audio}}
+\subsubsection{\texorpdfstring{Remove\+Effect()}{RemoveEffect()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_audio_effect}{Audio\+Effect} $\ast$ Audio\+::\+Remove\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes an audio effect. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The \hyperlink{class_audio_effect}{Audio\+Effect} type to remove. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The specified \hyperlink{class_audio_effect}{Audio\+Effect}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Dynamic\+Music/Audio.\+h\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Dynamic\+Music/Audio.\+cpp\end{DoxyCompactItemize}

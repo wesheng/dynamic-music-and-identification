@@ -1,0 +1,111 @@
+\hypertarget{class_audio_effect}{}\section{Audio\+Effect Class Reference}
+\label{class_audio_effect}\index{Audio\+Effect@{Audio\+Effect}}
+Inheritance diagram for Audio\+Effect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_effect}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual short $\ast$ \hyperlink{class_audio_effect_aa3ef3fe6eb855581fff9db8b69de37cf}{Pre\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Preprocesses the passed audio data. \end{DoxyCompactList}\item 
+virtual short $\ast$ \hyperlink{class_audio_effect_a2b6c7b17eddb589170c977f2d6dc0ec6}{Start\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Processes the passed audio data. \end{DoxyCompactList}\item 
+virtual short $\ast$ \hyperlink{class_audio_effect_aa281bd543b2841eeab97e7f23bed8889}{End\+Process} (short $\ast$data, int size, unsigned long shorts\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Processes the passed audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static short \hyperlink{class_audio_effect_a206794f66b9e0ca2cde69e970f3f398d}{Clamp} (short in)
+\begin{DoxyCompactList}\small\item\em Clamps the passed short to be within audio range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_effect_a234a96133b0b1dbaf4181626861f7c4a}\label{class_audio_effect_a234a96133b0b1dbaf4181626861f7c4a}} 
+class {\bfseries Audio\+Engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_audio_effect_a206794f66b9e0ca2cde69e970f3f398d}\label{class_audio_effect_a206794f66b9e0ca2cde69e970f3f398d}} 
+\index{Audio\+Effect@{Audio\+Effect}!Clamp@{Clamp}}
+\index{Clamp@{Clamp}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Clamp()}{Clamp()}}
+{\footnotesize\ttfamily static short Audio\+Effect\+::\+Clamp (\begin{DoxyParamCaption}\item[{short}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Clamps the passed short to be within audio range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & The short \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The clamped short, within the range -\/0x7fff and 0x7fff 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_audio_effect_aa281bd543b2841eeab97e7f23bed8889}\label{class_audio_effect_aa281bd543b2841eeab97e7f23bed8889}} 
+\index{Audio\+Effect@{Audio\+Effect}!End\+Process@{End\+Process}}
+\index{End\+Process@{End\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{End\+Process()}{EndProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ Audio\+Effect\+::\+End\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Processes the passed audio data. 
+
+Called by \hyperlink{class_audio_engine_abc49a7e983821493bf5becc5ab25c6a0}{Audio\+Engine\+::\+Swap()}. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The raw audio data, starting from current song position \\
+\hline
+{\em size} & The size of the data \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_effect_aa3ef3fe6eb855581fff9db8b69de37cf}\label{class_audio_effect_aa3ef3fe6eb855581fff9db8b69de37cf}} 
+\index{Audio\+Effect@{Audio\+Effect}!Pre\+Process@{Pre\+Process}}
+\index{Pre\+Process@{Pre\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Pre\+Process()}{PreProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ Audio\+Effect\+::\+Pre\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Preprocesses the passed audio data. 
+
+Called by \hyperlink{class_audio_engine_af4471a467aa56bcad3db5a8a9ce8d733}{Audio\+Engine\+::\+Play()}. This method will only be called once by the \hyperlink{class_audio_engine}{Audio\+Engine}. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The entire raw audio data \\
+\hline
+{\em size} & The size of the data \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_audio_effect_a2b6c7b17eddb589170c977f2d6dc0ec6}\label{class_audio_effect_a2b6c7b17eddb589170c977f2d6dc0ec6}} 
+\index{Audio\+Effect@{Audio\+Effect}!Start\+Process@{Start\+Process}}
+\index{Start\+Process@{Start\+Process}!Audio\+Effect@{Audio\+Effect}}
+\subsubsection{\texorpdfstring{Start\+Process()}{StartProcess()}}
+{\footnotesize\ttfamily virtual short$\ast$ Audio\+Effect\+::\+Start\+Process (\begin{DoxyParamCaption}\item[{short $\ast$}]{data,  }\item[{int}]{size,  }\item[{unsigned long}]{shorts\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Processes the passed audio data. 
+
+Called by \hyperlink{class_audio_engine_af4471a467aa56bcad3db5a8a9ce8d733}{Audio\+Engine\+::\+Play()} and \hyperlink{class_audio_engine_abc49a7e983821493bf5becc5ab25c6a0}{Audio\+Engine\+::\+Swap()}. Used when the \hyperlink{class_audio_engine}{Audio\+Engine} plays a song, starting from a specific position. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The raw audio data, starting from the current song position \\
+\hline
+{\em size} & The size of the data \\
+\hline
+{\em shorts\+Per\+Second} & Number of shorts per second (equivalent to bytes per second / 2) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/wsheng/\+Documents/\+Neumont/\+Q9/capstone/repo/project/\+Dynamic\+Music/Audio\+Effect.\+h\end{DoxyCompactItemize}
